@@ -78,8 +78,54 @@ function dogFeeder (weight){
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
-  
+const rock = 1;
+const paper = 2;
+const scissors = 3;
+
+
+let cpuChoice = Math.floor(Math.random() * 3 + 1);
+
+function rpsComputer(){
+    if (cpuChoice === 1){
+        cpuChoice = 'rock';
+    } else if (cpuChoice === 2){
+        cpuChoice = 'paper';
+    } else {
+        cpuChoice = 'scissors';
+    }
+}
+
+let rpsGame = function(playerChoice, cpuChoice){
+    if(playerChoice === cpuChoice){
+        return "Tie!";
+    }
+    if(playerChoice === 'rock'){
+        if(cpuChoice === 'scissors'){
+            return "Player wins! (rock)";
+        }
+        else{
+            return "CPU wins! (paper)";
+        }
+    }
+    if(playerChoice === 'paper'){
+        if(cpuChoice === 'rock'){
+            return "Player wins! (paper)";
+        }
+        else{
+            return "CPU wins! (scissors)";
+        }
+    }
+    if(playerChoice === 'scissors'){
+        if(cpuChoice === 'rock'){
+            return "CPU wins! (rock)";
+        }
+        else{
+            return "Player wins! (scissors)";
+        }
+    }
+}
+// console.log(rpsGame('rock', cpuChoice));
+
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
