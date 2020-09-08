@@ -8,7 +8,6 @@
 //     console.log(false);
 // }; 
 
-
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
 // let x = 5;
@@ -33,9 +32,11 @@
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+// function dogYears (param1, param2){
+//     return (param1 * 7);
+// };
 
-
-
+// console.log(dogYears(10));
 
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder 
@@ -55,8 +56,19 @@
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+function dogFeeder (weight){
+    if(weight < 4){
+        return (weight * .05);
+    } else if (weight > 6 && weight < 10){
+        return (weight * .04);
+    } else if (weight > 11 && weight === 15){
+        return (weight * .03);
+    } else (weight > 15)
+        return (weight * .02);
+    };
 
 
+// console.log(dogFeeder(15));
 
 
 /************************************************************** Task 4 **************************************************************/
@@ -94,7 +106,7 @@
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
-//write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade 
+//write a javaScript program that takes a mark out of 100 and returns a corresponding letter grade 
 //90s should be A 
 //80s should be B 
 //70s should be Cs 
