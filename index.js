@@ -131,15 +131,22 @@ let rpsGame = function(playerChoice, cpuChoice){
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
+let distConv = function (kilometer){
+    const mile = .62137;
+    return (kilometer * mile);
+}
 
-
+// console.log(distConv(10));
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
+let rulerConv = function (feet){
+    const centimeter = 30.48;
+    return (feet * centimeter);
+};
 
-
-
+// console.log(rulerConv(10));
 
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
