@@ -1,7 +1,11 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
-
-console.log('Hello World!');
+const votingAge = 100;
+if (votingAge >= 18){
+    console.log(true);
+} else {
+    console.log(false);
+};
 
 
 
