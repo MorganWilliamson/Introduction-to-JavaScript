@@ -153,9 +153,15 @@ let rulerConv = function (feet){
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
+// function annoyingSong (){
+//     let n = 98;
+//     while (n <= 99){
+//         n--;
+//     }
+//     console.log(n + "bottles of soda on the wall, " + n + "bottles of soda, take one down, pass it around, " + n + "bottles of soda on the wall!");   
+// }
 
-
-
+// annoyingSong(20);
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
