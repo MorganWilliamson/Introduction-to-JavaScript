@@ -56,16 +56,16 @@
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
-function dogFeeder (weight){
-    if(weight < 4){
-        return (weight * .05);
-    } else if (weight > 6 && weight < 10){
-        return (weight * .04);
-    } else if (weight > 11 && weight === 15){
-        return (weight * .03);
-    } else (weight > 15)
-        return (weight * .02);
-    };
+// function dogFeeder (weight){
+//     if(weight < 4){
+//         return (weight * .05);
+//     } else if (weight > 6 && weight < 10){
+//         return (weight * .04);
+//     } else if (weight > 11 && weight === 15){
+//         return (weight * .03);
+//     } else (weight > 15)
+//         return (weight * .02);
+//     };
 
 
 // console.log(dogFeeder(15));
@@ -78,52 +78,52 @@ function dogFeeder (weight){
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-const rock = 1;
-const paper = 2;
-const scissors = 3;
+// const rock = 1;
+// const paper = 2;
+// const scissors = 3;
 
 
-let cpuChoice = Math.floor(Math.random() * 3 + 1);
+// let cpuChoice = Math.floor(Math.random() * 3 + 1);
 
-function rpsComputer(){
-    if (cpuChoice === 1){
-        cpuChoice = 'rock';
-    } else if (cpuChoice === 2){
-        cpuChoice = 'paper';
-    } else {
-        cpuChoice = 'scissors';
-    }
-}
+// function rpsComputer(){
+//     if (cpuChoice === 1){
+//         cpuChoice = 'rock';
+//     } else if (cpuChoice === 2){
+//         cpuChoice = 'paper';
+//     } else {
+//         cpuChoice = 'scissors';
+//     }
+// }
 
-let rpsGame = function(playerChoice, cpuChoice){
-    if(playerChoice === cpuChoice){
-        return "Tie!";
-    }
-    if(playerChoice === 'rock'){
-        if(cpuChoice === 'scissors'){
-            return "Player wins! (rock)";
-        }
-        else{
-            return "CPU wins! (paper)";
-        }
-    }
-    if(playerChoice === 'paper'){
-        if(cpuChoice === 'rock'){
-            return "Player wins! (paper)";
-        }
-        else{
-            return "CPU wins! (scissors)";
-        }
-    }
-    if(playerChoice === 'scissors'){
-        if(cpuChoice === 'rock'){
-            return "CPU wins! (rock)";
-        }
-        else{
-            return "Player wins! (scissors)";
-        }
-    }
-}
+// let rpsGame = function(playerChoice, cpuChoice){
+//     if(playerChoice === cpuChoice){
+//         return "Tie!";
+//     }
+//     if(playerChoice === 'rock'){
+//         if(cpuChoice === 'scissors'){
+//             return "Player wins! (rock)";
+//         }
+//         else{
+//             return "CPU wins! (paper)";
+//         }
+//     }
+//     if(playerChoice === 'paper'){
+//         if(cpuChoice === 'rock'){
+//             return "Player wins! (paper)";
+//         }
+//         else{
+//             return "CPU wins! (scissors)";
+//         }
+//     }
+//     if(playerChoice === 'scissors'){
+//         if(cpuChoice === 'rock'){
+//             return "CPU wins! (rock)";
+//         }
+//         else{
+//             return "Player wins! (scissors)";
+//         }
+//     }
+// }
 // console.log(rpsGame('rock', cpuChoice));
 
 
@@ -131,20 +131,20 @@ let rpsGame = function(playerChoice, cpuChoice){
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-let distConv = function (kilometer){
-    const mile = .62137;
-    return (kilometer * mile);
-}
+// let distConv = function (kilometer){
+//     const mile = .62137;
+//     return (kilometer * mile);
+// }
 
 // console.log(distConv(10));
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
-let rulerConv = function (feet){
-    const centimeter = 30.48;
-    return (feet * centimeter);
-};
+// let rulerConv = function (feet){
+//     const centimeter = 30.48;
+//     return (feet * centimeter);
+// };
 
 // console.log(rulerConv(10));
 
@@ -153,15 +153,14 @@ let rulerConv = function (feet){
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
-// function annoyingSong (){
-//     let n = 98;
-//     while (n <= 99){
-//         n--;
+// function annoyingSong (num){
+//     for (let n = num; n > 0; n--){
+//         let num = n;
+//         console.log(`${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${num-1} bottles of soda on the wall`)
 //     }
-//     console.log(n + "bottles of soda on the wall, " + n + "bottles of soda, take one down, pass it around, " + n + "bottles of soda on the wall!");   
-// }
+// };
 
-// annoyingSong(20);
+// annoyingSong(99);
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
@@ -172,9 +171,21 @@ let rulerConv = function (feet){
 //60s should be D 
 //and anything below 60 should be F
   
+function gradeCalc(grade){
+    if (grade >= 90){
+        return 'A!!';
+    } else if (grade >= 80){
+        return 'B!';
+    } else if (grade >= 70){
+        return 'C.';
+    } else if (grade >= 60){
+        return 'D..';
+    } else {
+        return 'F...';
+    }
+}
 
-  
-  
+console.log(gradeCalc(78));  
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
